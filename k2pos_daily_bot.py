@@ -23,7 +23,7 @@ PHẦN 2: ✍️ BÀI VIẾT FACEBOOK ĐĂNG NGAY
 - Hook giật tít thực tế (1-2 dòng đầu, đánh trúng tim đen).
 - Kể câu chuyện/tình huống thực tế ngắn gọn.
 - Bài học đúc kết về quy trình vận hành.
-- Lồng ghép K2POS như một giải pháp hỗ trợ đồng hành (chỉ dùng các tính năng: bán hàng tại quầy, theo dõi thời gian chờ, quản lý món đã trả/chưa trả, hóa đơn điện tử).
+- Lồng ghép K2POS như một giải pháp hỗ trợ đồng hành (chỉ dùng các tính năng: bán hàng tại quầy, theo dõi thời gian chờ, quản lý món đã trả/chưa trả, h[...]
 - Kêu gọi hành động (CTA) và Hashtags.
 
 PHẦN 3: 🎨 HƯỚNG DẪN VISUAL & VIDEO
@@ -79,12 +79,12 @@ def main():
     if "PHẦN 3:" in raw_content:
         parts = raw_content.split("PHẦN 3:", 1)
         msg1 = header + parts[0].strip()
-        msg2 = f"🎨 *HƯỚNG DẪN VISUAL & VIDEO ({today_str})*\n\n" + parts.strip()
+        msg2 = f"🎨 *HƯỚNG DẪN VISUAL & VIDEO ({today_str})*\n\n" + parts[1].strip()
         messages = [msg1, msg2]
     elif "PHẦN 3" in raw_content:
         parts = raw_content.split("PHẦN 3", 1)
         msg1 = header + parts[0].strip()
-        msg2 = f"🎨 *HƯỚNG DẪN VISUAL & VIDEO ({today_str})*\n\n" + parts.strip()
+        msg2 = f"🎨 *HƯỚNG DẪN VISUAL & VIDEO ({today_str})*\n\n" + parts[1].strip()
         messages = [msg1, msg2]
     else:
         chunks = [raw_content[i:i+3000] for i in range(0, len(raw_content), 3000)]
