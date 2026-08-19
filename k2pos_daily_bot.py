@@ -75,7 +75,9 @@ def deliver_content(target_chat_id=None):
         if "PHẦN 3:" in raw_content:
             parts = raw_content.split("PHẦN 3:", 1)
             msg1 = header + parts[0].strip()
-            msg2 = f"🎨 *HƯỚNG DẪN VISUAL & VIDEO ({today_str})*\n\nPHẦN 3:\n" + parts.strip()
+            # Use the second part (index 1) which contains PHẦN 3 content
+            part3 = parts[1].strip() if len(parts) > 1 else ""
+            msg2 = f"🎨 *HƯỚNG DẪN VISUAL & VIDEO ({today_str})*\n\nPHẦN 3:\n" + part3
             messages = [msg1, msg2]
         else:
             chunks = [raw_content[i:i+3000] for i in range(0, len(raw_content), 3000)]
