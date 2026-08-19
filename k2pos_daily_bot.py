@@ -21,7 +21,7 @@ PHẦN 2: 🏆 BÀI VIẾT FACEBOOK ĐĂNG NGAY (Chọn ý tưởng tốt nhất
 - Hook mạnh mẽ (1-2 dòng đầu).
 - Nỗi đau/tình huống thực tế của quán F&B.
 - Góc nhìn/bài học kinh nghiệm thực tế.
-- Lồng ghép K2POS tự nhiên như người bạn đồng hành (tính năng: bán hàng tại quầy, theo dõi thời gian chờ, kiểm soát món đã trả/chưa trả, hóa đơn điện tử). Tuyệt đối không bịa thêm tính năng khác.
+- Lồng ghép K2POS tự nhiên như người bạn đồng hành (tính năng: bán hàng tại quầy, theo dõi thời gian chờ, kiểm soát món đã trả/chưa trả, hóa đơn điện [...]
 - Call to Action (kêu gọi bình luận hoặc lưu bài).
 - Hashtags liên quan.
 
@@ -79,7 +79,7 @@ def main():
     if "PHẦN 3:" in raw_content:
         parts = raw_content.split("PHẦN 3:")
         msg_part1 = header + parts[0].strip()
-        msg_part2 = f"🎨 *TÀI NGUYÊN VISUAL & VIDEO ({today_str})*\n\n" + parts.strip()
+        msg_part2 = f"🎨 *TÀI NGUYÊN VISUAL & VIDEO ({today_str})*\n\n" + parts[1].strip()
         messages = [msg_part1, msg_part2]
     else:
         # Nếu không tìm thấy điểm ngắt, tự động chia theo độ dài an toàn (< 3000 ký tự)
